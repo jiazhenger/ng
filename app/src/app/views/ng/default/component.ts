@@ -19,7 +19,7 @@
 			<dd><b>cd project-name</b> # 到项目文件夹</dd>
 			<dd><b>ng serve</b> # 启动 angular</dd>
 			<dd><b>ng serve --host 0.0.0.0 --port 4201</b> # 在不同的端口启动 angular</dd>
-			<dd><b>ng build --prot --aot</b></dd>
+			<dd><b>ng build --prod --base-href ./ng</b> # 打包</dd>
 		</dl>
 		<dl class="mvvm-list samebox mt10">
 			<dt>安装包命令：</dt>

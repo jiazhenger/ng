@@ -15,7 +15,7 @@ import { Store } from '@ngrx/store';
     template: `
         <router-outlet></router-outlet>
         <router-outlet name="popup"></router-outlet>
-        <div *ngIf="show || prompt || loading" class="loading-wraper fxmc">
+        <div *ngIf="show || prompt?.bool || loading" class="loading-wraper fxmc">
         	<dl class="loading-circle">
 	        	<dd><i></i><i></i><i></i><i></i></dd>
 	        	<dd><i></i><i></i><i></i><i></i></dd>
@@ -31,7 +31,7 @@ import { Store } from '@ngrx/store';
 })
 
 export class AppComponent{
-	prompt:boolean;
+	prompt:any;
 	loading:boolean;
 	constructor(
 		private router: Router, 
@@ -41,7 +41,7 @@ export class AppComponent{
 	){
 		// 获取 prompt
 		store.select('prompt').subscribe(v =>{
-			this.prompt = v.bool
+			this.prompt = v || {}
 		});
 		// 获取 loading
 		store.select('loading').subscribe(v =>{

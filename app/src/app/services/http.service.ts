@@ -157,7 +157,7 @@ export class HttpService {
 	getTxt(url){
 		//let api = 'http://10.1.22.15/angular/src/app/';					// 如果访问不了,查看是否配置了 MIME 类型
 		//let api= 'http://127.0.0.1:8020/my-template/angular/src/app/';	// 本地访问
-		let api= 'https://jiazhenger.github.io/ng/app/src/';				// github访问
+		let api= 'https://jiazhenger.github.io/ng/app/src/app/';			// github访问
 		return new Promise((resolve, reject) => {
 			this.http.get(api + url, { responseType: 'text' }).subscribe(data => {
 				if(data){

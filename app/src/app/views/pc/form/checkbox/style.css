@@ -9,4 +9,4 @@
 .checkbox input:checked+.check-2:before{color:#fff;background-color:#ff893c;border-color:#ff893c}
 .checkbox .check:before{font-size:12px;height:16px;line-height:14px;min-width:16px}
 .radio input:checked+.check:before{content:'\f111'}
-.radio .check:before{font-size:12px;height:18px;line-height:16px;min-width:18px;border-radius:100%}
+.radio .check:before{font-size:12px;height:18px;line-height:16px;min-width:18px;-webkit-border-radius:100%;-moz-border-radius:100%;-ms-border-radius:100%;border-radius:100%}

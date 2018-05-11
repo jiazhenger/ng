@@ -1,7 +1,7 @@
 .font-close:before{content:'\f00d'}
 .btn-default{background-color:#4da1ff;padding:0 10px;color:#fff}
-.btn-default:hover{box-shadow:0 1px 3px #888}
-.btn-default.disabled,.btn-default[disabled]{box-shadow:none}
+.btn-default:hover{-webkit-box-shadow:0 1px 3px #888;-moz-box-shadow:0 1px 3px #888;-ms-box-shadow:0 1px 3px #888;box-shadow:0 1px 3px #888}
+.btn-default.disabled,.btn-default[disabled]{-webkit-box-shadow:none;-moz-box-shadow:none;-ms-box-shadow:none;box-shadow:none}
 .btn-o{padding:0 10px;min-width:90px;border:1px solid #4da1ff;background-color:#fff;color:#4da1ff}
 .bc-abbac3{background-color:#abbac3}
 .bc-428bca{background-color:#428bca}

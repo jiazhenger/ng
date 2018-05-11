@@ -6,14 +6,13 @@
 .nav-list{font-size:14px}
 .nav-list>li{border-bottom:1px solid #e5e5e5;position:relative}
 .nav-list>li>a{padding:8px 0 8px 0;background-color:#f8f8f8}
-.nav-list>li>a:hover{background-color:#fff}
 .nav-list>li>a:hover:before{width:3px;height:100%;background-color:#4da1ff;position:absolute;z-index:0;left:0;top:0;content:''}
-.nav-list>li>a.active{background-color:#fff}
+.nav-list>li>a.active{background-color:#fff;color:#4da1ff}
 .nav-list>li>a i{min-width:30px;text-align:center;font-size:18px;margin:0 5px}
 .nav-list>li.open>a{background-color:#fafafa;color:#4da1ff}
 .nav-list>li.open>a b:before{content:'\f107'}
-.nav-list>li.active>a{background-color:#fff}
 .nav-list>li.active:after{content:'';position:absolute;z-index:0;right:0;top:0;width:2px;height:100%;background-color:#4da1ff}
+.nav-list>li.active>a,.nav-list>li>a:hover{background-color:#fff;color:#4da1ff}
 .nav-list a:after{content:'';position:absolute;right:0;top:50%;margin-top:-18px;border-right-style:solid;border-right-color:#4da1ff;border-width:18px 10px 18px 0;display:none}
 .nav-list a{position:relative;display:block}
 .nav-list a *{display:inline-block;vertical-align:middle}
