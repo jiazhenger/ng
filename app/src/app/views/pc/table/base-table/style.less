@@ -1,0 +1,44 @@
+@import "H:/less/library.less";
+// =============================================== config
+@table-th-start-bgcolor:#f8f8f8;
+@table-th-end-bgcolor:#ececec;
+@table-even-bgcolor:#f9f9f9;
+@table-odd-bgcolor:#fff;
+@table-hover-bgcolor:#eff4f7;
+@table-border-color:@border-color;
+// =============================================== extend
+
+// =============================================== icon
+
+// =============================================== content
+// 基本样式
+.table{.bc_fff;
+    td,th{.p(8px 10px);.bor(@table-border-color);}
+    th{.nowrap;
+        .gradient(@table-th-start-bgcolor,@table-th-end-bgcolor);
+    }
+}
+// 鼠标移入样式
+.table-hover{
+    tbody tr{ 
+        &:nth-child(2n) td{.bc(@table-even-bgcolor)}
+        &:nth-child(2n+1) td{.bc(@table-odd-bgcolor)}
+        &:hover td{.bc(@table-hover-bgcolor);}
+    }
+}
+// 表格数据过多滚动显示
+.table-scroll{
+    th,td{.nowrap;}
+    &::-webkit-scrollbar{.ww(6);}
+}
+// 拖动表格单元格宽度
+// js 拖动表格列大小配置
+@table-fixed-border-right-color:@main-color;    // 拖动时右侧列线颜色
+@table-fixed-bgcolor:#fef7ee;                   // 拖动时整列  td 背景色
+.table-fixed{
+    .active{.rbor(@table-fixed-border-right-color)} // 拖动时右侧列线颜色
+    th,td{.w(150);}
+    tbody td:extend(.nowrap){
+        &.active{.bc(@table-fixed-bgcolor)}         // 拖动时整列  td 背景色
+    }
+}

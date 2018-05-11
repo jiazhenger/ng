@@ -1,0 +1,20 @@
+@import "H:/less/library.less";
+// =============================================== config
+@pop-header-height:50;
+// =============================================== extend
+
+// =============================================== icon
+.font-close:before{content:'\f00d'}
+// =============================================== content
+.pop-wraper{.fix_lt(0,0,100);.rgba(0,0,0,0.3);.wh;.oh;
+    q{.abs_lt;.wh;}
+}
+.pop-fx-container{.bc_fff;.rel(1);.w(600);}
+.pop-content{}
+// =================================== popup name
+.pop-header{.hh(@pop-header-height);.pl15;.bbor(@border-color);
+    h3{.f14;.b}
+    >a{.w(@pop-header-height);.tc;.db;
+        &:hover{.c(@main-color)}
+    }
+}

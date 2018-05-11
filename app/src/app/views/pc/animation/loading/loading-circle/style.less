@@ -1,0 +1,84 @@
+@import "H:/less/library.less";
+// =============================================== config
+
+// =============================================== extend
+
+// =============================================== icon
+
+// =============================================== loading-circle
+.loading-wraper{.fix_lt(0,0,10);.wh;.rgba(255,255,255,0.3);}
+.loading-circle{.ww(@size);.p_rel;
+    @bgcolor:#ec407a;
+    @size:40;
+    @circle-size:8;
+    
+    i{.ww(@circle-size);.r0px;.p_abs;.bc(@bgcolor);
+        .animation(loadingCircle 1.2s infinite ease-in-out);
+        .animation-fill-mode;
+        
+        &:nth-child(1){.l_t}
+        &:nth-child(2){.r_t}
+        &:nth-child(3){.r_b}
+        &:nth-child(4){.l_b}
+    }
+    dd{.p_abs;.wh;
+        &:nth-child(1) i{
+            &:nth-child(2){.animation-delay(-0.9)}
+            &:nth-child(3){.animation-delay(-0.6)}
+            &:nth-child(4){.animation-delay(-0.3)}
+        }
+        &:nth-child(2){.rotateZ(45);
+            i{
+                &:nth-child(1){.animation-delay(-1.1)}
+                &:nth-child(2){.animation-delay(-0.8)}
+                &:nth-child(3){.animation-delay(-0.5)}
+                &:nth-child(4){.animation-delay(-0.2)}
+            }
+        }
+        &:nth-child(3){.rotateZ(90);
+            i{
+                &:nth-child(1){.animation-delay(-1.0)}
+                &:nth-child(2){.animation-delay(-0.7)}
+                &:nth-child(3){.animation-delay(-0.4)}
+                &:nth-child(4){.animation-delay(-0.1)}
+            }
+        }
+    }
+}
+@keyframes loadingCircle {
+    0%, 80%, 100%{transform: scale(0.0)}
+    40%{transform: scale(1.0)}
+}
+// =============================================== loading-circle-2
+.loading-circle-2{.ww(@size);.p_rel;.animation(rotate 2.0s infinite linear);
+    @bgcolor:#ec407a;
+    @size:90;
+    @circle-size:60%;
+    
+    i{.ww(@circle-size);.p_abs;.r0px;.bc(@bgcolor);.animation(bounce 2.0s infinite ease-in-out);
+        &:nth-child(1){.t;}
+        &:nth-child(2){.bm;.animation-delay(-1.0)}
+    }
+}
+@keyframes rotate {100%{transform:rotate(360deg)}}
+@keyframes bounce {
+    0%, 100%{transform:scale(0.0)}
+    50%{ transform:scale(1.0)};
+}
+// =============================================== loading-circle-3
+.loading-circle-3{.ww(@size);.p_rel;
+    @bgcolor:#ec407a;
+    @size:150;
+    @circle-size:30;
+    
+    i{.ww(@circle-size);.dk;.r0px;.bc(@bgcolor);
+        .animation(bouncedelay 1.4s infinite ease-in-out);
+        .animation-fill-mode;
+        &:nth-child(1){.animation-delay(-0.32)}
+        &:nth-child(2){.animation-delay(-0.16)}
+    }
+}
+@keyframes bouncedelay {
+  0%, 80%, 100% { transform: scale(0.0) }
+  40% { transform: scale(1.0) }
+}

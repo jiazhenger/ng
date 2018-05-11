@@ -1,0 +1,24 @@
+@import "H:/less/library.less";
+// =============================================== config
+
+// =============================================== extend
+
+// =============================================== icon
+.font-close:before{content:'\f00d'}
+// =============================================== 默认按钮
+.btn-default{.bc(@main-color);.plr10;.c_fff;
+    &:hover{.box-shadow(0 1px 3px #888)}
+    &.disabled,&[disabled]{.box-shadow(none);}
+}
+// =============================================== 空心按钮
+.btn-o{.plr10;.mw(90);.bor(@main-color,1);.bc_fff;.c(@main-color);}
+// =============================================== 按钮颜色
+.bc-abbac3{.bc(#abbac3)}
+.bc-428bca{.bc(#428bca)}
+.bc-6fb3e0{.bc(#6fb3e0)}
+.bc-87b87f{.bc(#87b87f)}
+.bc-ffb752{.bc(#ffb752)}
+.bc-d15b47{.bc(#d15b47)}
+.bc-d6487e{.bc(#d6487e)}
+.bc-9585bf{.bc(#9585bf)}
+.bc-555{.bc(#555)}

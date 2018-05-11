@@ -1,0 +1,80 @@
+<header class="header">
+	<h1 class="logo"><a routerLink="/pc"><img src="../../../assets/images/logo.png"></a></h1>
+	<i class="font-navicon small-nav" id="smallNav"></i>
+</header>
+<section class="container">
+	<aside class="navigation oys" id="navigation">
+		<ul>
+			<li>
+				<h3 class="js-tit"><span>字体图标</span><i class="font-angle-right"></i></h3>
+				<menu>
+					<li><a routerLink="/pc/font-awesome" routerLinkActive="active">font-awesome</a></li>
+				</menu>
+			</li>
+			<li>
+				<h3 class="js-tit"><span>响应式布局</span><i class="font-angle-right"></i></h3>
+				<menu>
+					<li><a routerLink="/pc/grid" routerLinkActive="active">grid 响应式布局</a></li>
+				</menu>
+			</li>
+			<li>
+				<h3 class="js-tit"><span>按钮</span><i class="font-angle-right"></i></h3>
+				<menu>
+					<li><a routerLink="/pc/button" routerLinkActive="active">按钮</a></li>
+				</menu>
+			</li>
+			<li>
+				<h3 class="js-tit"><span>表单</span><i class="font-angle-right"></i></h3>
+				<menu>
+					<li><a routerLink="/pc/form-group" routerLinkActive="active">基本表单</a></li>
+					<li><a routerLink="/pc/checkbox" routerLinkActive="active">选择框</a></li>
+				</menu>
+			</li>
+			<li>
+				<h3 class="js-tit"><span>表格</span><i class="font-angle-right"></i></h3>
+				<menu>
+					<li><a routerLink="/pc/base-table" routerLinkActive="active">基本表格</a></li>
+					<li><a routerLink="/pc/scroll-table" routerLinkActive="active">滚动表格</a></li>
+				</menu>
+			</li>
+			<li>
+				<h3 class="js-tit"><span>弹窗</span><i class="font-angle-right"></i></h3>
+				<menu>
+					<li><a routerLink="/pc/pop-table" routerLinkActive="active">table 居中弹窗</a></li>
+					<li><a routerLink="/pc/pop-position" routerLinkActive="active">position 居中弹窗</a></li>
+					<li><a routerLink="/pc/pop-fx" routerLinkActive="active">flexbox 居中弹窗</a></li>
+				</menu>
+			</li>
+			<li>
+				<h3 class="js-tit"><span>css3 动画</span><i class="font-angle-right"></i></h3>
+				<menu>
+					<li>
+						<h5 class="js-tit"><span>加载动画</span><i class="font-angle-right"></i></h5>
+						<nav>
+							<a routerLink="/pc/loading-line" routerLinkActive="active">线条加载</a>
+							<a routerLink="/pc/loading-circle" routerLinkActive="active">圆形加载</a>
+						</nav>
+					</li>
+				</menu>
+			</li>
+			<li>
+				<h3 class="js-tit"><span>导航</span><i class="font-angle-right"></i></h3>
+				<menu>
+					<li><a routerLink="/pc/ace" routerLinkActive="active">ace 导航</a></li>
+				</menu>
+			</li>
+			<li>
+				<h3 class="js-tit"><span>Web Color</span><i class="font-angle-right"></i></h3>
+				<menu>
+					<li><a routerLink="/pc/color" routerLinkActive="active">Color</a></li>
+				</menu>
+			</li>
+		</ul>
+	</aside>
+	<main class="oxys">
+		<section class="content">
+			<router-outlet></router-outlet>
+		</section>
+	</main>
+</section>
+

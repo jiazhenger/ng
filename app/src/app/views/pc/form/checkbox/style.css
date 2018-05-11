@@ -1,0 +1,12 @@
+.font-check:before{content:'\f00c'}
+.checkbox,.radio{font-size:14px;cursor:pointer}
+.checkbox input,.radio input{width:1px;height:1px;position:absolute;z-index:-100}
+.checkbox input:checked+.check:before,.radio input:checked+.check:before{content:'\f00c';color:#4da1ff;background-color:#f5f8fc;border-color:#adb8c0}
+.checkbox .check:before,.radio .check:before{content:'\a0';cursor:pointer;font-family:FontAwesome;color:#fff;background-color:#fafafa;border:1px solid #c8c8c8;text-align:center;margin-right:5px}
+.checkbox:hover input+.check:before,.radio:hover input+.check:before{border:1px solid #ff893c}
+.checkbox input[disabled]+.check:before,.radio input[disabled]+.check:before{background-color:#ddd;border:1px solid #ccc;color:#bbb}
+.checkbox input[disabled]:hover .check,.radio input[disabled]:hover .check{border:1px solid #d5d5d5}
+.checkbox input:checked+.check-2:before{color:#fff;background-color:#ff893c;border-color:#ff893c}
+.checkbox .check:before{font-size:12px;height:16px;line-height:14px;min-width:16px}
+.radio input:checked+.check:before{content:'\f111'}
+.radio .check:before{font-size:12px;height:18px;line-height:16px;min-width:18px;border-radius:100%}

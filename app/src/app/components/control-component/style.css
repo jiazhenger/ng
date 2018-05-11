@@ -1,0 +1,27 @@
+.fx,.fxc,.fxj,.fxm,.fxmc,.fxmj,.fxmr,.fxr{display:-webkit-flex;display:-moz-flex;display:-ms-flex;display:flex}
+.fv{display:-webkit-flex;display:-moz-flex;display:-ms-flex;display:flex;flex-direction:column}
+.fxc,.fxmc,.fzc{justify-content:center}
+.fxmr,.fxr,.fzr{justify-content:flex-end}
+.fxm,.fxmc,.fxmj,.fxmr,.fzm{align-items:center}
+.fxj,.fxmj,.fzj{justify-content:space-between}
+.fzb{align-items:flex-end}
+.fxt{align-items:flex-start}
+.fxl{justify-content:flex-start}
+.flex{flex:1}
+.control-component{position:fixed;z-index:0;right:0;top:0;padding:9px 20px;background-color:#fff}
+.control-component button{margin-left:5px;float:left}
+.control-component button:first-child{margin-left:0}
+@media (max-width:767px){
+.control-component{top:auto;bottom:0;width:100%;border-top:1px solid #ddd;display:-webkit-flex;display:-moz-flex;display:-ms-flex;display:flex;padding:10px 3%}
+.control-component .fx{display:-webkit-flex;display:-moz-flex;display:-ms-flex;display:flex}
+.control-component .fv{display:-webkit-flex;display:-moz-flex;display:-ms-flex;display:flex;flex-direction:column}
+.control-component .fzc{justify-content:center}
+.control-component .fzr{justify-content:flex-end}
+.control-component .fzm{align-items:center}
+.control-component .fzj{justify-content:space-between}
+.control-component .fzb{align-items:flex-end}
+.control-component .fxt{align-items:flex-start}
+.control-component .fxl{justify-content:flex-start}
+.control-component .flex{flex:1}
+.control-component button{min-width:1px;display:block;flex:1}
+}
