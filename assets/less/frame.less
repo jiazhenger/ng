@@ -1,0 +1,81 @@
+﻿// ======================================================================== library.less
+@import "H:/less/library.less";
+// ======================================================================== images/path
+//@url:'../images/imagesFolderName/';
+// ======================================================================== extend.less
+.omit{.omit}
+// ======================================================================== 
+@import "public/config.less";
+// ======================================================================== icon
+.font-close:before{content:'\f00d'}
+.font-file-code-o:before{content:'\f1c9'}
+// ======================================================================== 代码 copy 窗
+.pop-my-wraper{.wh;.fix_lt(0,0,100);.rgba(0,0,0,0.3);.oh;
+    >div{.dt;.wh;
+        >div{.dtd;.vm;.wh;
+            >div{;.mau;.max_h(100%);.oy;.os;.rel(1);}
+        }
+    }
+    q{.abs_lt;.wh;}
+}
+.pop-my-container{.bc_fff;.wh(90%,80%);.p_rel;.ox;.oy;}
+// =================================== popup name
+.pop-my-header{.hh36;.pl15;.bbor(@border-color);.box-shadow(0 2px 3px #bbb);.user-select;
+    h3{.f14;.fl;.b}
+    >a{.w(36);.fr;.tc;}
+}
+.pop-my-content:extend(.r5px){.p_abs_lt(10,36+10);.r(10);.bm(10);.bor(@border-color);.bc(fff);.os;
+   .box-shadow(0 0 5px #aaa);.oh(auto);
+   &::-webkit-scrollbar{.ww(6);}
+   &::-webkit-scrollbar-thumb{.bc(#666);.obor(1px solid #666)}
+}
+.code-list-container{.w;.dt;.f12;.bc(#fdf7f2);.oh;.ar;.c_333;
+    // .ff(monospace);
+    &:extend(.bbsb,.r5px);
+    dl{.dtd;
+       &:first-child{.w(20);.tc;.rbor(#6ce26c,2);.c(gray);}
+    }
+    dt,dd{.hh22;.nowrap;.plr10;
+       &:nth-child(2n){.bc_fff;}
+    }
+    dt{.user-select;.tr;}
+    dd{.pre;
+        &:hover{.bc(#ead6c7);}
+    }
+    .code-aot-html,.code-aot-css-js{.c(#69a469);.i}
+    .code-tag-js,.code-tag-link{.c(#083dc3);}
+}
+// ======================================================================== icon
+.mvvm-list{
+    dt{.c(#d6487e);.f14;.lh28;.mb5;}
+    dt{.mr10;}
+    dd{.ml20;.p_rel;.pl20;.lh24;.mb5;
+        &:before{.cn('#');.rel;.l(-10);.c(@main-color);}
+    }
+}
+.mvvm-box-1{.bor_ddd;.bc(#fef7ee);.hh(200);.fs(40);.plr20;.b;}
+.mvvm-box-2{.bor_ddd;.bc(#fef7ee);.p20;.lh30;
+    h3{.f20;.b;.mb10;.lh;}
+}
+.mvvm-code,.mvvm-pre{
+    i{.c(#d6487e)}
+    s{.c(blue);.tn;.ml15;}
+    b{.c(#f00)}
+}
+.mvvm-pre{.lh22;.ar;}
+// ======================================================================== samebox
+.shadow{.box-shadow(0 0 10px #f6f6f6);}
+.samebox,.my-box{.shadow;.r5px;.bc_fff;.p15;}
+// ======================================================================== btn
+.ng-frame .btn-default,.btn-my-default{.bc(@main-color);.hh30;.plr10;.mw(100);.c_fff;.r3px;
+    &:hover{.box-shadow(0 1px 3px #888)}
+}
+.ng-frame .btn-o,.btn-my-o{.h32;.plr10;.mw(90);.bor(@main-color,1);.bc_fff;.lh30;.r3px;}
+// ======================================================================== 字体图标列表样式
+.icon-data-list:extend(.samebox){.mb15;
+    h3{.f18;.lh;.pb15;.bbor(@border-color);.mb20;}
+    li:extend(.omit){.cp;.f16;.hh30;.mb10;.plr10;
+        i{.f22;.mr10;}
+        &:hover{.c(@main-color);.bc_eee;}
+    }
+}
