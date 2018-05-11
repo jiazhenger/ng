@@ -70,7 +70,7 @@ export class AppComponent{
 		})
 		.filter(route => route.outlet === 'primary')
 		.mergeMap(route => route.data).subscribe((event) => {
-			this.titleService.setTitle(event['title']);
+			this.titleService.setTitle(event['title'] || 'Angular 模板');
 		});
 		
 	}
