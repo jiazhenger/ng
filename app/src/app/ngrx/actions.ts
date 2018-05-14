@@ -20,3 +20,5 @@ export class PromptClose implements Action {
 }
 
 export type ALL = LoadingOpen | LoadingClose | PromptOpen | PromptClose
+
+//export default {LoadingOpen,LoadingClose,PromptOpen,PromptClose}

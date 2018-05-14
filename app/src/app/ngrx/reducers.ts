@@ -38,4 +38,5 @@ export const prompt = ( state, action:Action) => {
 			return { bool:false }
 	}
 }
+
 export default { loading, prompt, config }

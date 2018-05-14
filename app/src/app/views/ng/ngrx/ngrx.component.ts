@@ -1,4 +1,3 @@
-// ===================================================== 
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 // ===================================================== 公共服务
@@ -39,12 +38,18 @@ export class NgrxComponent{
 	config:any;
 	
 	constructor(private router: RouterService, private store: Store<any>, private http:HttpService){
-		store.select('prompt').subscribe(v => this.prompt = v );
-		store.select('loading').subscribe(v => this.loading = v );
+		
+	}
+	
+	ngOnInit(){
+		this.store.select('prompt').subscribe(v => {
+			this.prompt = v;
+		});
+		this.store.select('loading').subscribe(v => this.loading = v );
 		
 		this.store.dispatch({ type: 'init' });
-		store.select('config').subscribe(v => this.config = v );
-		
+		this.store.select('config').subscribe(v => this.config = v );
+		console.log(this.store)
 		//this.http.$fn.dispatch('init','config', v => this.config = v)
 	}
 	

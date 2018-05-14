@@ -36,7 +36,8 @@ import { AppComponent } from './app.component';
 			headerName: 'My-Xsrf-Header',	// 配置自定义 header 名称
 		}),*/
 		BrowserAnimationsModule,
-		StoreModule.forRoot({ ...Reducers, initialState:Config}),	// 安装 store
+		StoreModule.forRoot(Reducers),	// 安装 store
+		//StoreModule.forRoot({ ...Reducers, initialState:Config}),	// 安装 store
 		AppRoutingModule		// 根路由
 	],
 	// 声明创建的组件，（只能放三种：components, directives, pipes）
