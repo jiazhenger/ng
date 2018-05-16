@@ -1,0 +1,15 @@
+	<div class="clearfix samebox">
+		<ul class="mb10 col-xs-25 f14" *ngFor="let item of data.data">
+			<li class="h40 fxj" *ngFor="let v of item.items" [style.background]="v.color">
+				<span class="pl10 db">{{v.name}}</span>
+				<span class="pr10 db">{{v.color.toLowerCase()}}</span>
+			</li>
+		</ul>
+	</div>
+
+<!-------------------------- start ------------------------->
+<control-component [parent]="this"></control-component>
+<!--------------------------  end  ------------------------->
+
+
+

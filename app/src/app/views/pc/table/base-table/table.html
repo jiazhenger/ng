@@ -1,0 +1,24 @@
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th *ngFor="let v of data.dataTitle">{{v}}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let v of data.data">
+			<td>{{v.id}}</td>
+			<td>{{v.name}}</td>
+			<td>{{v.note}}</td>
+			<td>{{v.stock}}</td>
+			<td>{{v.ship}}</td>
+			<td>{{v.sdate}}</td>
+		</tr>
+	</tbody>
+</table>
+
+<!-------------------------- start ------------------------->
+<control-component [parent]="this"></control-component>
+<!--------------------------  end  ------------------------->
+
+
+

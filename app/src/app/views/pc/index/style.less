@@ -1,0 +1,56 @@
+@import "H:/less/library.less";
+// =============================================== config
+@header-height:50;
+@border-color:#efefef;
+@nav-width:200;
+@bgcolor:#fafbfc;
+// =============================================== extend
+.omit{.omit}
+.linear{.linear};
+// =============================================== icon
+.font-angle-right:before{content:'\f105'}
+.font-navicon:before{content:'\f0c9';.f16;}
+// =============================================== content
+.header{.h(@header-height);.bbor(@border-color)}
+.logo{.rel_m;.m_tl(-20,20);.fl;.wh(150,40);.fl;
+    a{.wh;.db;}
+    img{.wh;}
+}
+.small-nav{.ww(30);.bc(@main-color);.c_fff;.tc;.lh30;.r3px;.rel_m;.m_tl(-15,10);.fl;.cp;.dn;}
+.container{.w;.p_abs;.t(@header-height);.bm;.mw(@min-width);}
+.navigation{.wh(@nav-width);.fl;.rbor(@border-color);.p_rel;
+    menu,nav{.ml20;.dn;}
+    h3,h5{.hh32;.plr5;.bscb;.bor(#fff);.cp;
+        span{.fl;}
+        i:extend(.linear){.f18;.fr;.rotate(0);}
+        &:hover{.bor_c(@main-color);}
+        &.active{.c(@main-color);
+            i{.rotate(90);}
+        }
+        >a{.p;.hh32}
+    }
+    h3,h5,a{.r3px;
+        &:extend(.omit);
+        &:hover{.bc(#eee);.c(@main-color);}
+    }
+    h5,a{.hh28;}
+    h5{
+        i{.f18;}
+    }
+    ul{.p(10px 5px);}
+    a{.db;.plr5;
+        &.active{.c(@main-color);}
+    }
+}
+main{.h;.ml(@nav-width);.bc(@bgcolor);
+    &::-webkit-scrollbar{.ww(5);}
+}
+.content{.p(20);}
+@media (max-width:@sm-window-width-1){
+    .navigation{.abs_lt(0,0,1);.bm;.hau;.bc_fff;.dn;
+        &.show{.db;}
+    }
+    main{.m;}
+    .content{.p(3% 3% 60px 3%);}
+    .small-nav{.db;}
+}
