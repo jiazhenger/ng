@@ -3,7 +3,7 @@
 @Component({
 	selector: 'test-component',
     template: `
-        <div style="font-size:30px;color:red">
+        <div style="font-size:30px;color:red;line-height:120%">
         	<ng-content></ng-content>
         </div>
     `

@@ -34,7 +34,7 @@ import { RouterService } from 'src/app/services/router.service';
         <ng-template>ng-template 用来渲染HTML, 它永远不会直接显示出来</ng-template>
         
         <hr class="_mt10_mb10x">
-        <ng-container><div style="font-size:20px;color:blue">ng-container 把一些兄弟元素归为一组, Angular 不会把ng-container放进 DOM 中</div></ng-container>
+        <ng-container><div style="font-size:20px;color:blue;line-height:120%">ng-container 把一些兄弟元素归为一组, Angular 不会把ng-container放进 DOM 中</div></ng-container>
         
         <hr class="_mt10_mb10x">
         <test-component>ng-content 动态插入内容到子组件 ng-content 位置</test-component>
