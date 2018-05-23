@@ -1,0 +1,27 @@
+<div class="icon-data-list" *ngFor="let item of data.data">
+	<h3>{{item.item}}</h3>
+	<ul class="clearfix">
+		<li class="col-sm-33 col-md-25" *ngFor="let v of item.code" (click)="pop(v.name,v.code)"><i [ngClass]="v.name"></i>{{v.name}}</li>
+	</ul>
+</div>
+
+<section class="pop-wraper" [ngClass]="{dn:!show}">
+	<div class="pop-table">
+		<div class="pop-cell">
+			<div class="pop-container w500">
+				<header class="pop-header">
+					<h3><span class="f22"><i [ngClass]="title"></i></span></h3><a class="font-close close" (click)="show=false"></a>
+				</header>
+				<section class="pop-content  _lh36_p15_f14">
+					<p class="omit" contenteditable="true" spellcheck="false">{{title}}</p>
+					<p class="omit" contenteditable="true" spellcheck="false">{{codeCss}}</p>
+					<p class="omit" contenteditable="true" spellcheck="false">{{code}}</p>
+				</section>
+			</div>
+			<q (click)="show=false"></q>
+		</div>
+	</div>
+</section>
+<!-------------------------- start ------------------------->
+<control-component [parent]="this"></control-component>
+<!--------------------------  end  ------------------------->

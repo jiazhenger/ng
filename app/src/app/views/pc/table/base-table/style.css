@@ -1,0 +1,11 @@
+.table{background-color:#fff}
+.table td,.table th{padding:8px 10px;border:1px solid #ddd}
+.table th{white-space:nowrap;background-color:#f8f8f8;background-image:-webkit-linear-gradient(top,#f8f8f8,#ececec);background-image:-moz-linear-gradient(top,#f8f8f8,#ececec);background-image:-ms-linear-gradient(top,#f8f8f8,#ececec);background-image:-o-linear-gradient(top,#f8f8f8,#ececec);background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0,#f8f8f8),color-stop(1,#ececec));filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr=#f8f8f8, endColorStr=#ececec, gradientType=0)}
+.table-hover tbody tr:nth-child(2n) td{background-color:#f9f9f9}
+.table-hover tbody tr:nth-child(2n+1) td{background-color:#fff}
+.table-hover tbody tr:hover td{background-color:#eff4f7}
+.table-scroll td,.table-scroll th{white-space:nowrap}
+.table-scroll::-webkit-scrollbar{width:6px;height:6px}
+.table-fixed .active{border-right:1px solid #4da1ff}
+.table-fixed td,.table-fixed th{width:150px}
+.table-fixed tbody td.active{background-color:#fef7ee}

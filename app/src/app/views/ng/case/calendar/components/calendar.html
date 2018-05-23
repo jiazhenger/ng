@@ -1,0 +1,94 @@
+<section class="my-calendar" [ngClass]="wraperClass" (click)="stopPrev($event)">
+	<!--  今天时间：2017 年 8 月 5 日 -->
+	<header *ngIf="hasHeader" class="today">
+		<em class="year">{{date.year}}</em><b>年</b>
+		<em class="month">{{date.month}}</em><b>月</b>
+		<em class="date">{{date.date}}</em><b>日</b><span>星期<em class="day">{{date.day}}</em></span>
+	</header>
+	<ng-container [ngSwitch]="style">
+		<!-- 方向键、选年月 -->
+		<header *ngSwitchCase="0" class="s-date">
+			<i (click)="leftChange()" class="font-angle-left dir-left" [ngClass]="{disabled:yearModel ==  range[0] && monthModel <= 1}"></i>
+			<i (click)="rightChange()" class="font-angle-right dir-right" [ngClass]="{disabled:yearModel ==  range[1] && monthModel >= 12}"></i>
+			<span><em class="year"></em>{{date.year}}<b>年</b><em class="month">{{date.month}}</em><b>月</b></span>
+		</header>
+		<!-- 方向键  + select 选年月 -->
+		<header *ngSwitchCase="1" class="s-date s-date-1">
+			<i (click)="leftChange()" class="font-angle-left dir-left" [ngClass]="{disabled:yearModel ==  range[0] && monthModel <= 1}"></i>
+			<i (click)="rightChange()" class="font-angle-right dir-right" [ngClass]="{disabled:yearModel ==  range[1] && monthModel >= 12}"></i>
+			<span>
+				<select class="year" [(ngModel)]="yearModel" (ngModelChange)="yearChange()">
+					<option *ngFor="let v of year" [value]="v">{{v}} 年</option>
+				</select>
+				<select class="month" [(ngModel)]="monthModel" (ngModelChange)="monthChange()">
+					<option *ngFor="let v of month" [value]="v">{{v}} 月</option>
+				</select>
+			</span>
+		</header>
+		<!-- select 选年月 -->
+		<header *ngSwitchCase="2" class="s-date s-date-1">
+			<select class="year" [(ngModel)]="yearModel" (ngModelChange)="yearChange()">
+				<option *ngFor="let v of year" [value]="v">{{v}} 年</option>
+			</select>
+			<select class="month" [(ngModel)]="monthModel" (ngModelChange)="monthChange()">
+				<option *ngFor="let v of month" [value]="v">{{v}} 月</option>
+			</select>
+		</header>
+		<!-- 方向键、单选年或月 -->
+		<header *ngSwitchCase="3" class="s-year-month js-wrap">
+			<div class="s-date">
+				<i (click)="yearMinusChange()" class="font-angle-left dir-left" [ngClass]="{disabled:yearModel <=  range[0]}"></i>
+				<i (click)="yearAddChange()" class="font-angle-right dir-right" [ngClass]="{disabled:yearModel >=  range[1]}"></i>
+				<span><em class="year">{{date.year}}</em><b>年</b></span>
+			</div>
+			<div class="s-date">
+				<i (click)="monthMinusChange()" class="font-angle-left dir-left"></i>
+				<i (click)="monthAddChange()" class="font-angle-right dir-right"></i>
+				<span><em class="month">{{date.month}}</em><b>月</b></span>
+			</div>
+		</header>
+		<!-- 方向键、select、单选年月 -->
+		<div *ngSwitchCase="4" class="s-year-month">
+			<div class="s-date">
+				<i (click)="yearMinusChange()" class="font-angle-left dir-left" [ngClass]="{disabled:yearModel <=  range[0]}"></i>
+				<i (click)="yearAddChange()" class="font-angle-right dir-right" [ngClass]="{disabled:yearModel >=  range[1]}"></i>
+				<span>
+					<select class="year" [(ngModel)]="yearModel" (ngModelChange)="yearChange()">
+						<option *ngFor="let v of year" [value]="v">{{v}} 年</option>
+					</select>
+				</span>
+			</div>
+			<div class="s-date">
+				<i (click)="monthMinusChange()" class="font-angle-left dir-left"></i>
+				<i (click)="monthAddChange()" class="font-angle-right dir-right"></i>
+				<span>
+					<select class="month" [(ngModel)]="monthModel" (ngModelChange)="monthChange()">
+						<option *ngFor="let v of month" [value]="v">{{v}} 月</option>
+					</select>
+				</span>
+			</div>
+		</div>
+	</ng-container>
+	<table>
+		<thead>
+			<tr>
+				<th *ngFor="let v of theadList;index as i" [ngClass]="{weekend:i==0||i==6}">{{v}}</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let items of tdList">
+				<td *ngFor="let v of items;first as first; last as last" [attr.rel]="v.rel"
+					[ngClass]="{
+						now:v.now,
+						disabled:v.disabled,
+						active: result.date == v.rel || active == v.rel,
+						weekend: last || first
+					}"
+					(click)="getTime(v.rel,v.disabled)"
+				>
+					{{v.time}}
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</section>
