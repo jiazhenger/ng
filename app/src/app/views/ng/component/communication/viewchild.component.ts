@@ -35,8 +35,10 @@ export class Child3Component{
         </div>
         
         <hr class="_mt10_mb10x">
-        <button (click)="getChild()" class="btn-default">获取子组件的方法</button>
-        <button (click)="getChild2()" class="btn-default">获取子组件的属性</button>
+        <div class="btn-group">
+	        <button (click)="getChild()" class="btn-default">获取子组件的方法</button>
+	        <button (click)="getChild2()" class="btn-default">获取子组件的属性</button>
+        </div>
         <hr class="_mt10_mb10x">
         <test-viewchild ref-fx></test-viewchild>
     `
@@ -59,10 +61,10 @@ export class ViewChildComponent{
   	
   	component(){
 		this.router.go({ popup: 'code' });
-		localStorage.code = 'ng/component/communication/viewchild.component.ts';
+		localStorage.code = 'views/ng/component/communication/viewchild.component.ts';
 	}
 	module(){
 		this.router.go({ popup: 'code' });
-		localStorage.code = 'ng/component/cpt.module.ts';
+		localStorage.code = 'views/ng/component/cpt.module.ts';
 	}
 }

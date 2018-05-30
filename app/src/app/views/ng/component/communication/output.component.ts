@@ -79,10 +79,10 @@ export class OutputComponent{
   	
   	component(){
 		this.router.go({ popup: 'code' });
-		localStorage.code = 'ng/component/communication/output.component.ts';
+		localStorage.code = 'views/ng/component/communication/output.component.ts';
 	}
 	module(){
 		this.router.go({ popup: 'code' });
-		localStorage.code = 'ng/component/cpt.module.ts';
+		localStorage.code = 'views/ng/component/cpt.module.ts';
 	}
 }

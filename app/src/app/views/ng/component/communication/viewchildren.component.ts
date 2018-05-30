@@ -53,8 +53,10 @@ export class Child4Component{
         </div>
         
         <hr class="_mt10_mb10x">
-        <button (click)="getChild()" class="btn-default">获取子组件的相同属性不同值</button>
-        <button (click)="getChild2()" class="btn-default">获取子组件的不相同属性</button>
+        <div class="btn-group">
+	        <button (click)="getChild()" class="btn-default">获取子组件的相同属性不同值</button>
+	        <button (click)="getChild2()" class="btn-default">获取子组件的不相同属性</button>
+        </div>
         
         <hr class="_mt10_mb10x">
         
@@ -94,10 +96,10 @@ export class ViewChidrenComponent{
   	
   	component(){
 		this.router.go({ popup: 'code' });
-		localStorage.code = 'ng/component/communication/viewchildren.component.ts';
+		localStorage.code = 'views/ng/component/communication/viewchildren.component.ts';
 	}
 	module(){
 		this.router.go({ popup: 'code' });
-		localStorage.code = 'ng/component/cpt.module.ts';
+		localStorage.code = 'views/ng/component/cpt.module.ts';
 	}
 }

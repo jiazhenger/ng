@@ -56,10 +56,10 @@ export class IdComponent{
 	
   	component(){
 		this.router.go({ popup: 'code' });
-		localStorage.code = 'ng/component/communication/id.component.ts';
+		localStorage.code = 'views/ng/component/communication/id.component.ts';
 	}
   	module(){
 		this.router.go({ popup: 'code' });
-		localStorage.code = 'ng/component/cpt.module.ts';
+		localStorage.code = 'views/ng/component/cpt.module.ts';
 	}
 }

@@ -7,7 +7,7 @@ import { Animations } from 'src/app/views/ng/animation/animations';
 @Component({
     template: `
         <div class="samebox btn-group">
-        	<button class="btn-default" (click) = "component()">查看本组件</button>
+			<button class="btn-default" (click) = "component()">查看本组件</button>
 			<button class="btn-default" (click) = "directive()">查看指令</button>
         </div>
         
