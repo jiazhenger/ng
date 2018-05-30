@@ -15,12 +15,15 @@
 		<dl class="mvvm-list samebox mt10">
 			<dt>环境配置：</dt>
 			<dd><b>npm install -g @angular/cli</b> # 安装脚手架</dd>
-			<dd><b>ng new project-name</b> # 新建项目文件夹</dd>
+			<dd><b>ng new project-name</b> # 创建基本项目</dd>
+			<dd><b>ng new project-name --style less</b> # 创建 less 编译项目</dd>
+			<dd><b>ng new project-name --style sass</b> # 创建 sass 编译项目</dd>
 			<dd><b>cd project-name</b> # 到项目文件夹</dd>
+			<dd><b>ng add ng-alain</b> # 添加第三方组件到项目</dd>
 			<dd><b>ng serve</b> # 启动 angular</dd>
 			<dd><b>ng serve --open|-o</b> # 启动 angular并打开浏览器</dd>
 			<dd><b>ng serve --host 0.0.0.0 --port 4201</b> # 在不同的端口启动 angular</dd>
-			<dd><b>ng build --prod --base-href ./ng</b> # 打包</dd>
+			<dd><b>ng build --prod --base-href ./</b> # 相对访问打包</dd>
 		</dl>
 		<dl class="mvvm-list samebox mt10">
 			<dt>安装包命令：</dt>
